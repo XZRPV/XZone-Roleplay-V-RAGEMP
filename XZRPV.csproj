@@ -1,0 +1,49 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+    <BaseOutputPath>C:\XZRPV\server-files\dotnet\resources\XZRPV</BaseOutputPath>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath>C:\XZRPV\server-files\dotnet\resources\XZRPV\</OutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Attributes\**" />
+    <Compile Remove="bin\**" />
+    <EmbeddedResource Remove="Attributes\**" />
+    <EmbeddedResource Remove="bin\**" />
+    <None Remove="Attributes\**" />
+    <None Remove="bin\**" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Folder Include="Migrations\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Bootstrapper">
+      <HintPath>C:\XZRPV\server-files\bridge\Bootstrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="rage-sharpN">
+      <HintPath>C:\RAGEMP\dotnet\rage-sharpN.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.10">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="3.2.7" />
+    <PackageReference Include="RAGEMP-ragesharp" Version="1.1.3" />
+  </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command=":: Include the entire client folder&#xD;&#xA;xcopy /E /Y &quot;$(ProjectDir)\Client&quot; &quot;C:\XZRPV\server-files\client_packages\cs_packages\XZRPV\&quot;&#xD;&#xA;" />
+  </Target>
+</Project>
