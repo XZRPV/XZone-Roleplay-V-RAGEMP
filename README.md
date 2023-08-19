@@ -1,7 +1,7 @@
 # XZone Roleplay V
 
 ### Initial setup
-1. Download the latest release https://github.com/XZRPV/XZRPV/releases - make sure you download the executables and the server files.
+1. Download the latest release https://github.com/juandiegox21/XZone-Roleplay-V-RAGEMP/releases - make sure you download the executables and the server files.
 2. Move the `XZRPV` folder you downloaded from releases into your `Local Disk (C:)` drive.
 3. Unzip the Windows or Linux executable into the root of your project folder, in this case, `XZRPV`.
 4. Run the server executable and ignore any errors for now.
