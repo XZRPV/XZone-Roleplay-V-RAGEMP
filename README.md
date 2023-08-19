@@ -16,12 +16,12 @@
    - You can also use docker-engine if you'd prefer, but I recommend docker desktop if you are new to docker.
 3. Enable Hyper-v and virtualization, you can also do this using WSL 2 (I recommend using WSL 2).
 4. In PowerShell, execute the following command `docker-compose up -d` and wait until it's finished running.
-   ![image](https://github.com/juandiegox21/XZone-Roleplay-V-RAGEMP/assets/45730487/1557ede2-0f89-48ba-9ee1-d4cfb8783705)
+   - ![image](https://github.com/juandiegox21/XZone-Roleplay-V-RAGEMP/assets/45730487/1557ede2-0f89-48ba-9ee1-d4cfb8783705)
 
 6. Go into the XZRPV solution in Visual Studio.
    - Open the NuGet package manager console from `Tools > NuGet Package Manager > Package Manager Console`.
    - In the Package Manager Console enter the command `Update-Database`, this will run all the Database migrations and will add the tables to your Database.
-   ![image](https://github.com/juandiegox21/XZone-Roleplay-V-RAGEMP/assets/45730487/70f890c7-5630-485d-876d-bb2d8f98cbfb)
+   - ![image](https://github.com/juandiegox21/XZone-Roleplay-V-RAGEMP/assets/45730487/70f890c7-5630-485d-876d-bb2d8f98cbfb)
 
 7. The Migrations should have run successfully.
 8. We recommend you use a MYSQL IDE to ensure the tables migrated successfully, we recommend https://tableplus.com/ as it's a light-weight IDE.
